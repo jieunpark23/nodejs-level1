@@ -1,4 +1,5 @@
-// /schemas/index.js
+import dotenv from "dotenv";
+dotenv.config();
 
 // mongoose 사용해서 mongoDB 연결
 import mongoose from 'mongoose';
@@ -6,7 +7,7 @@ import mongoose from 'mongoose';
 const connect = () => {
   mongoose
     .connect(
-      'mongodb+srv://<ID>:<비밀번호>@express-mongo.uy7ttg7.mongodb.net/?retryWrites=true&w=majority',
+      process.env.MONGO_URI,
       {
         dbName: 'nodejs_level1', // node_level1 데이터베이스명을 사용합니다.
       }
