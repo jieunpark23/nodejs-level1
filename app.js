@@ -1,8 +1,8 @@
 import express from 'express';
-import commentsRouter from './routes/comments.router.js';
-import postsRouter from './routes/posts.router.js';
+import commentsRouter from './routes/comments.js';
+import postsRouter from './routes/posts.js';
 import connect from './schemas/index.js';
-import ErrorHandlerMiddleware from './middlewares/error-handler.middleware.js';
+import ErrorHandlerMiddleware from './middlewares/error-handler.js';
 
 const app = express();
 const PORT = 3001;
